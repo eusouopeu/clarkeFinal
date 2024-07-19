@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./public/favicon.svg" />
+    <title>Clarkinho</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+      body {
+        font-family: Roboto;
+        font-size: 16px;
+        color:black;
+        background-color: white;
+      }
+      h1, h2, h3 ,h4, h5, h6 {
+        font-weight: 700;
+        line-height: 125%;
+      }
+      h2 {
+        font-size: 32px;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      p, li, a {
+        font-size: 1rem;
+        text-align: justify;
+        max-width: 95%;
+      }
+      label {
+        font-family: Comfortaa;
+        font-weight: 700;
+      }
+      section, .s-gap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .s-padding {
+        padding: 60px 12vw;
+      }
+      .s-shadow {
+        box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+      }
+      button {
+        display: flex;
+        padding: 6px 16px;
+        background-color: green;
+        color: white;
+        font-weight: 700;
+        border-radius: 50px;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+
+</head>
+
+
+<body>
+  <header class='fixed z-20 flex items-center justify-between w-full py-[12px] px-[25px] bg-gradient-to-b from-white from-60% to-zinc-400 shadow-xl text-emerald-400'>
+    <h2 class='text-[20px] font-display font-medium'>
+      <span class='font-extrabold'>Clarke</span>Energia
+    </h2>
+    
+    <img src="./public/barIcon.svg" alt="icone de menu" class='lg:hidden' width="24" height="24" />
+    <nav class='hidden lg:flex gap-[24px]'>
+      <ul class='flex items-center gap-[16px] text-black'>
+        <li>
+          <a class="font-medium hover:font-extrabold hover:text-emerald-500 duration-500" href='https://clarke.com.br/sobre-nos/' target="_blank"> Sobre nós </a>
+        </li>
+        <li>
+          <a class="font-medium hover:font-extrabold hover:text-emerald-500 duration-500" href='https://clarke.com.br/mercado-livre-de-energia/' target="_blank"> Mercado Livre </a>
+        </li>
+        <li>
+          <a class="font-medium hover:font-extrabold hover:text-emerald-500 duration-500" href='https://clarke.com.br/blog/' target="_blank"> Blog </a>
+        </li>
+      </ul>
+
+      <button class="flex py-[6px] px-[12px] bg-gradient-to-b from-emerald-500 hover:from-emerald-600 to-green-600 hover:to-green-700 rounded-full shadow-lg text-white font-medium">
+        Dê um 10 pro nosso trabalho
+      </button>
+    </nav>
+
+  </header>
+
+  
+    <main class="flex min-h-screen flex-col items-center pt-[45px] justify-between">
+      
+      <img src='./public/img1.jpg' alt="imagem 1" layout="fill" objectFit="cover" class="w-full h-[900px] lg:h-[500px] brightness-50 s-shadow" />
+
+      <section class="absolute s-gap justify-between s-padding z-10 flex flex-col lg:flex-row pt-[60px] text-white">
+        <div>
+          <h6 class="text-[20px] text-emerald-400 font-bold">
+            <span class="font-medium text-white">#o</span>futuro<span class="font-medium text-white">é</span>livre
+          </h6>
+          <h2 class="font-display text-start my-[12px] text-[40px] font-bold">
+            A Clarke ajuda empresas a economizar até <span class="text-emerald-400">40%</span> na conta de luz
+          </h2>
+          <p class='text-16px'>
+            A Clarke é um marketplace do Mercado Livre de Energia que ajuda negócios com gastos mensais de <span class="text-emerald-400 font-bold">mais de R$ 10 mil por mês</span> a economizar na conta de luz.
+          </p>
+        </div>
+  
+        <form action="" class='flex flex-col w-full p-[16px] gap-[8px] bg-gradient-to-b from-zinc-50/20 to-zinc-100/20 backdrop-blur-sm rounded-lg text-zinc-100'>
+          <label class="font-bold" for="nome">
+            Nome da Empresa:
+          </label>
+          <input id='nome' type="text" placeholder="Clarke Energia" class='py-[8px] px-[16px] bg-slate-100/70 placeholder:text-zinc-900 rounded-xl shadow-lg' readOnly/>
+          <label class="font-bold" for="ramo">
+            Ramo:
+          </label>
+          <input id='ramo' type="text" placeholder="Energia, MarketPlace, FinTech" class='py-[8px] px-[16px] bg-slate-100/70 placeholder:text-zinc-900 rounded-xl shadow-lg' readOnly/>
+          <label class="font-bold" for="tamanho">
+            Tamanho:
+          </label>
+          <input id='tamanho' type="text" placeholder="Pequeno porte (1.000)" class='py-[8px] px-[16px] bg-slate-100/70 placeholder:text-zinc-900 rounded-xl shadow-lg' readOnly/>
+          <label class="font-bold" for="nome">
+            Produtos:
+          </label>
+          <input id='nome' type="text" placeholder="Aplicação Web e App Mobile" class='py-[8px] px-[16px] bg-slate-100/70 placeholder:text-zinc-900 rounded-xl shadow-lg' readOnly/>
+  
+          <button class='self-center flex mt-[8px] py-[6px] px-[64px] bg-gradient-to-b from-emerald-500 hover:from-emerald-600 to-green-600 hover:to-green-700 rounded-full shadow-lg text-white font-medium'>
+            Enviar
+          </button>
+  
+        </form>
+      </section>
+
+
+      <section class="s-gap s-padding">
+        <h2 class="text-[40px] text-center font-extrabold">Integração Contínua</h2>
+
+        <p>
+          É uma prática de automatizar a integração de alterações de código de vários contribuidores em
+          um único projeto de software, permitindo que os desenvolvedores mesclem com frequência as alterações de código em um repositório central onde builds e testes são executados
+        </p>
+
+        <div class="flex flex-col lg:flex-row items-center justify-around">
+          <div class="flex flex-col p-0">
+            <h4 class="text-[20px] font-bold">
+              Algumas ferramentas de Integração são:
+            </h4>
+            <ul class="flex flex-col list-disc p-[32px] gap-[8px]">
+              <li>Jenkins</li>
+              <li>Azure DevOps</li>
+              <li>CodeShip</li>
+              <li>PagerDuty</li>
+            </ul>
+          </div>
+          
+          <div class="flex flex-col">
+            <h4 class="text-[20px] font-bold">
+              Dentre as vantagens de seu uso, estão:
+            </h4>
+            <ul class="flex flex-col list-disc p-[32px] gap-[8px]">
+              <li>Melhorar a produtividade do desenvolvedor</li>
+              <li>Encontrar e investigar bugs mais rapidamente</li>
+              <li>Distribuir atualizações mais rapidamente</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <section class="flex flex-col flex-wrap s-shadow items-center w-full bg-gradient-to-r from-zinc-50 to-zinc-200 light:bg-gradient-to-r light:from-zinc-800 light:to-zinc-900 gap-0">
+        <div class="flex flex-col items-center justify-center w-full h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+          <h3 class="text-[30px] leading-none font-black text-center">
+            <span class='text-emerald-500 text-[80px] font-bold'>3</span>
+            <br/>
+            Arquitetura Modular
+          </h3>
+          
+          <p class="w-[95%]">
+            Arquitetura modular é uma abordagem de design de sistemas onde um sistema é dividido em módulos menores, independentes e reutilizáveis, que podem ser desenvolvidos, testados e mantidos separadamente.
+          </p>
+          <p class="w-[95%]">
+            Principais Características: O sistema é dividido em módulos, cada um com uma funcionalidade específica, onde os módulos podem ser desenvolvidos e atualizados de forma independente, podem ser reutilizados em diferentes sistemas ou projetos. Problemas podem ser identificados e corrigidos em módulos específicos, sem afetar todo o sistema e permite a substituição ou atualização de módulos sem grandes impactos no sistema geral.
+          </p>
+          <h4 class="text-[20px] font-bold pl-[16px]">
+            Vantagens:
+          </h4>
+          <ul class="flex flex-col lg:flex-row lg:justify-between list-disc pl-[32px] gap-[8px] lg:gap-[32px]">
+            <li>Escalabilidade</li>
+            <li>Manutenibilidade</li>
+            <li>Colaboração</li>
+            <li>Eficiência no Desenvolvimento</li>
+          </ul>
+          
+        </div>
+        
+        <div class="flex flex-col lg:flex-row">
+          <div class="flex flex-col items-center justify-center w-full md:w-[50%] h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+            <h3 class="text-[30px] leading-none font-black text-center">
+              <span class='text-emerald-500 text-[80px] font-bold'>4</span>
+              <br/>
+              Testes Unitários
+            </h3>
+            
+            <p class="w-[95%]">
+              Verificam a funcionalidade de unidades individuais de código, como funções, métodos ou classes, com o objetivo dearantir que cada unidade funcione corretamente isoladamente.
+            </p>
+            <p class="w-[95%]">
+              Cada teste é executado de forma independente, sem dependências externas. Além de serem rápidos de executar, permitindo a detecção precoce de erros, facilitam a automação e são geralmente executados frequentemente durante o desenvolvimento.
+            </p>
+            <p class="w-[95%]">
+              Uma ferramenta para teste unitário que a Clarke utiliza é o Python
+            </p>
+          </div>
+          <div class="flex flex-col items-center justify-center w-full md:w-[50%] h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+            <h3 class="text-[30px] leading-none font-black text-center">
+              <span class='text-emerald-500 text-[80px] font-bold'>5</span>
+              <br/>
+              Testes de Integração
+            </h3>
+            
+            <p class="w-[95%]">
+              Avaliam a interação entre diferentes módulos ou componentes de um sistema para garantir que os módulos funcionem corretamente quando combinados. São focados nas interfaces e nas interações entre os módulos e geralmente mais complexos e demorados que os testes unitários. Verificam a integração de componentes maiores e a comunicação entre eles
+            </p>
+            <h4 class="text-[20px] font-bold">
+              Ferramentas Comuns: 
+            </h4>
+            <ul  class="flex flex-col list-disc pl-[32px] gap-[8px]">
+              <li>TestNG (Java)</li>
+              <li>MSTest (.NET)</li>
+              <li>Selenium (para integração de frontend)</li>
+            </ul>
+          </div>
+        </div>
+        
+      </section>
+      
+      <section class="s-gap s-padding">
+        <h2 class="text-[40px] text-center font-extrabold">Banco de Dados</h2>
+
+        <p>
+          Banco de Dados é o sistema de armazenamento de informações que permite a organização, gerenciamento e recuperação de dados de uma empresa. Para acessá-lo, geralmente utiliza-se linguagens de programação especificas, chamadas linguagens de acesso ao Banco de Dados. Essas linguagens, por sua vez, podem ser classificadas como: Relacionais e Não-Relacionais
+        </p>
+        <p>
+          A modelagem, a manutenção, a segurança, o acesso e a manipulação dos dados dos bancos de dados geralmente faz parte das responsabilidades de um DBA (Administrador de Banco de Dados) ou de um desenvolvedor de back-end.
+        </p>
+
+        <div class="flex flex-col lg:flex-row items-center justify-around">
+          <div class="flex flex-col p-0">
+            <h4 class="text-[20px] font-bold">
+              As linguagens de acesso ao Banco de Dados usadas pela Clarke são:
+            </h4>
+            <ul class="flex flex-col list-disc p-[32px] gap-[8px]">
+              <li>PostgreSQL (relacional)</li>
+              <li>MongoDB (não relacional)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section  class="flex flex-col flex-wrap s-shadow items-center w-full bg-gradient-to-r from-zinc-50 to-zinc-200 light:bg-gradient-to-r light:from-zinc-800 light:to-zinc-900 gap-0">
+        <div class="flex flex-col items-center justify-center w-full md:w-[50%] h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+          <h3 class="text-[30px] leading-none font-black text-center">
+            <span class='text-emerald-500 text-[80px] font-bold'>2</span>
+            <br/>
+            Banco de Dados Relacional: PostgreSQL
+          </h3>
+          
+          <p class="w-[95%]">
+            Sistema de gerenciamento de banco de dados relacional avançado e open-source. Ele organiza os dados em tabelas estruturadas, onde cada tabela é composta por linhas e colunas.
+          </p>
+          <h4 class="text-[20px] font-bold">
+            Características Principais:
+          </h4>
+          <ul  class="flex flex-col list-disc pl-[32px] gap-[8px]">
+            <li>Linguagem SQL (Structured Query Language)</li>
+            <li>Esquema Rígido</li>
+            <li>Chaves Primárias e Estrangeiras</li>
+            <li>Transações ACID</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center justify-center w-full md:w-[50%] h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+          <h3 class="text-[30px] leading-none font-black text-center">
+            <span class='text-emerald-500 text-[80px] font-bold'>1</span>
+            <br/>
+            Banco de Dados Não Relacional: MongoDB
+          </h3>
+          
+          <p class="w-[95%]">
+            MongoDB é um banco de dados NoSQL orientado a documentos, que armazena dados em documentos BSON (uma forma binária de JSON).
+          </p>
+          <h4 class="text-[20px] font-bold">
+            Características Principais:
+          </h4>
+          <ul  class="flex flex-col list-disc pl-[32px] gap-[8px]">
+            <li>Esquema Flexível</li>
+            <li>Documentos</li>
+            <li>Escalabilidade Horizontal</li>
+            <li>Consultas Ricas</li>
+          </ul>
+        </div>
+        
+      </section>
+      
+      <section class="flex flex-col lg:flex-row lg:justify-between w-full s-shadow bg-gradient-to-r from-emerald-400 to-green-500">
+        <img src="./public/Desktop.png" alt="imagem de desktop" width="850" height="450" class="w-full lg:max-w-[50%]"/>
+        
+        <div class="s-gap justify-center w-full lg:max-w-[50%] p-[64px]">
+          <h2 class="text-[30px] text-white font-bold">Website</h2>
+          
+          <ul class="flex flex-col gap-[8px] pl-[24px] *:text-[1.125rem]">
+            <li>
+              <span class="text-white font-bold">Informações Públicas: </span>
+              Endereço, contato, termos de uso, etc.
+            </li>
+            <li>
+              <span class="text-white font-bold">Linguagens: </span>
+              HTML, CSS e JavaScript (back-end facultativo)
+            </li>
+          </ul>
+  
+          <h2 class="text-[30px] text-end text-white font-bold mt-[16px]"> Blog e Aplicação Web </h2>
+            <ul class="flex flex-col gap-[8px]  *:text-[1.125rem] *:text-end">
+              <li>
+                <span class="text-white font-bold">Conteúdo dinâmico: </span>
+                Cadastro, autenticação (clientes e/ou funcionários), acesso à informações privadas, etc.
+              </li>
+              <li>
+                <span class="text-white font-bold">Linguagens: </span>
+                React/Vue (front-end) | Node.js/Python (back-end)
+              </li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="flex flex-col flex-wrap s-shadow items-center w-full bg-gradient-to-r from-zinc-50 to-zinc-200 light:bg-gradient-to-r light:from-zinc-800 light:to-zinc-900 gap-0">
+        <div class="flex flex-col lg:flex-row lg:content-stretch w-full">
+          <div class="flex flex-col items-center justify-center w-full lg:w-[50%] h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+              <h3 class="text-[30px] leading-none font-black text-center">
+                <span class='text-emerald-500 text-[80px] font-bold'>1</span>
+                <br/>
+                Back-end: Python
+              </h3>
+  
+              </h4>
+              <ul  class="flex flex-col list-disc pl-[32px] gap-[8px]">
+                <li>Simplicidade</li>
+                <li>Legibilidade</li>
+                <li>Versatilidade</li>
+                <li>Agilidade</li>
+                <li>Eficiência</li>
+              </ul>
+          </div>
+          <div class="flex flex-col items-center justify-center w-full lg:w-[50%] h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+            <h3 class="text-[30px] leading-none font-black text-center">
+              <span class='text-emerald-500 text-[80px] font-bold'>2</span>
+              <br/>
+              Front-end: React / JavaScript
+            </h3>
+
+            </h4>
+            <ul  class="flex flex-col list-disc pl-[32px] gap-[8px]">
+              <li>Interatividade</li>
+              <li>Compatibilidade Multiplataforma</li>
+              <li>Versatilidade</li>
+              <li>Ecossistema de Frameworks e Bibliotecas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center w-full h-full py-[24px] px-[16px] gap-[16px] bg-gradient-to-r from-zinc-50 to-zinc-200 hover:from-emerald-100 hover:to-emerald-200 border-[1px] border-zinc-300">
+            <h3 class="text-[30px] leading-none font-black text-center">
+              <span class='text-emerald-500 text-[80px] font-bold'>2</span>
+              <br/>
+              Hospedagem
+            </h3>
+
+            <p class="w-[95%]">
+              Hospedagem de software refere-se ao serviço de disponibilização de aplicações e sites na internet. Empresas ou provedores de hospedagem oferecem infraestrutura e serviços para armazenar, executar e manter esses softwares acessíveis online.
+            </p>
+            <p class="w-[95%]">
+              O tipo de hospedagem utiliado pela Clarke é em nuvem, mais especificamente o Google Cloud Platform.
+            </p>
+            <p class="w-[95%]">
+              Hospedagem em nuvem é um serviço que utiliza múltiplos servidores interconectados para hospedar aplicações e sites, oferecendo maior flexibilidade, escalabilidade e desempenho comparado aos métodos tradicionais de hospedagem. É um tipo de hospedagem escalável, automática, de alta disponibilidade e segurança e de ótimo custo benefício
+            </p>
+        </div>
+        
+      </section>
+
+      
+      
+      
+      <section class="flex flex-col lg:flex-row-reverse lg:justify-between w-full s-shadow bg-gradient-to-r from-emerald-400 to-green-500">
+        <img src="./public/Desktop.png" alt="imagem de desktop" width="850" height="450" class="w-full lg:max-w-[50%]"/>
+
+        <div class="s-gap justify-center w-full lg:max-w-[50%] p-[64px] gap-[40px]">
+          <h2 class="text-[30px] text-white font-extrabold">Aplicativo Mobile</h2>
+          <ul class="flex flex-col gap-[24px] pl-[24px] *:text-[1.125rem]">
+            <li class="text-[16px] leading-tight">
+              <span class="text-white font-bold">Multiplataforma: </span>
+                disponível tanto na Apple Store (dispositivos iOS) quanto na Play Store (dispositivos Android)
+            </li>
+            <li class="text-[16px] leading-tight">
+              <span class="text-white font-bold">Linguagens: </span>
+                Swift (iOS), Java (Android), React Native / Flutter (multiplataformas)
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="s-gap s-padding">
+        <h2 class="text-[40px] text-center font-extrabold">Políticas de Backup & </h2>
+
+        <p class="text-[16px] text-justify">A política de backup refere-se às práticas e procedimentos estabelecidos para garantir que os dados importantes sejam protegidos e possam ser recuperados em caso de perda ou corrupção.</p>
+        <p class="text-[16px] text-justify">A Clarke foca em duas principais políticas de backup:</p>
+        <ul class="flex flex-col list-disc pl-[32px] gap-[8px]">
+          <li>
+            <span class="font-extrabold">Backup Diário do Banco de Produção:</span>
+            <br/>
+              Significa que cópias de segurança (backups) dos bancos de dados usados em um ambiente de produção, onde as operações reais e transações de usuários ocorrem são feitas todos os dias. 
+          </li>
+          <li>
+            <span class="font-extrabold">Versionamento do GitHub:</span>
+            <br/>
+             Significa que o código-fonte é atualizado e versionado no GitHub diariamente. Isso geralmente envolve commits regulares e pushs para o repositório no GitHub.
+          </li>
+          <li>
+            <span class="font-extrabold">Diferencial:</span>
+            Cópia dos dados alterados desde o último backup completo; balanceia eficiência e rapidez na restauração.
+          </li>
+        </ul>
+
+        <p class="text-[16px] text-justify">A política de backup existe para garantir prontidão para lidar com perdas de dados, evitar prejuízos financeiros e perda de credibilidade e permite restauração rápida e precisa em caso de incidentes. Isso porque a LGPD exige o uso de servidor seguro e criptografado, que favorece a exclusão de dados dados conforme solicitado e detecta aplicações não autorizadas.</p>
+
+        <h4 class="text-[20px] font-bold">Componentes de uma Política de Backup:</h4>
+        <ul class="flex flex-col list-disc pl-[32px] gap-[8px]">
+          <li>
+            <span class="font-extrabold">Escopo e Objetivos:</span>
+            Dados e sistemas incluídos, RTO e RPO.
+          </li>
+          <li>
+            <span class="font-extrabold">Frequência de Backup:</span>
+            Baseada na criticidade dos dados.
+          </li>
+          <li>
+            <span class="font-extrabold">Tipos de Backup:</span>
+            Completo, incremental, diferencial.
+          </li>
+          <li>
+            <span class="font-extrabold">Métodos de Armazenamento:</span>
+            Locais, remotos ou em nuvem.
+          </li>
+          <li>
+            <span class="font-extrabold">Procedimentos de Recuperação:</span>
+            Definição clara de procedimentos e responsabilidades.
+          </li>
+          <li>
+            <span class="font-extrabold">Testes e Auditorias:</span>
+            Frequência de testes e auditorias.
+          </li>
+          <li>
+            <span class="font-extrabold">Segurança::</span>
+            Proteção dos dados de backup.
+          </li>
+        </ul>
+
+      </section>
+      
+      <section class="s-gap s-padding">
+        <h2 class="text-[40px] text-center font-extrabold">Políticas de Dados, Backup & Técnicas de Segurança</h2>
+
+        <p class="text-[16px] text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, exercitationem! Blanditiis facere maxime a laudantium incidunt doloremque magni maiores dolorum, rerum numquam placeat, eos illum quibusdam, eius error dicta tempora?</p>
+        <p class="text-[16px] text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, exercitationem! Blanditiis facere maxime a laudantium incidunt doloremque magni maiores dolorum, rerum numquam placeat, eos illum quibusdam, eius error dicta tempora?</p>
+        <p class="text-[16px] text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, exercitationem! Blanditiis facere maxime a laudantium incidunt doloremque magni maiores dolorum, rerum numquam placeat, eos illum quibusdam, eius error dicta tempora?</p>
+
+      </section>
+      
+    </main>
+
+
+
+    <footer class='flex flex-col lg:flex-row justify-center lg:justify-evenly p-[54px] gap-[64px] lg:flex bg-black text-white'>
+
+      <ul class='flex flex-col gap-[32px] text-white *:text-[14px]'>
+        <li>
+          <span class='text-white font-bold'>CNPJ:</span>
+          <br/>
+          xx.xxx.xxx/xxxx-xx
+        </li>
+        <li>
+          <span class='text-white font-bold'>Endereço:</span>
+          <br/>
+          Rua dos Pinheiros, 610, Escritório 41
+          <br/>
+          05.422-902, São Paulo, SP
+        </li>
+        <li>
+          <span class='text-white font-bold'>Contato:</span>
+          <br/>
+          +55 (11) 93409-0834
+          <br/>
+          <span class='underline'>contato@clarke.com.br</span>
+        </li>
+        <li class='flex gap-[16px]'>
+          <span class='text-white font-bold'>Siga-nos:</span>
+          <br/>
+          
+        </li>
+      </ul>
+
+      <div>
+        <h6 class="text-[16px] font-bold mb-[12px]">Destaques:</h6>
+        <img src='./public/Destaques.png' alt='Destaques' />
+      </div>
+      
+      
+      <div class="flex flex-col justify-between">
+        <h6 class="text-[16px] font-bold">A Clarke apoia:</h6>
+        <img src='./public/ClarkeApoia.png' alt='Clarke Apoia' width="150" height="150" />
+
+        <ul class='flex flex-col text-white w-fit'>
+          <li>
+            <a href='https://clarke.com.br/politica-de-privacidade/' target='_blank' class='hover:text-emerald-500 hover:font-bold'> P. de Privacidade </a>
+          </li>
+          <li>
+            <a href='https://clarke.gupy.io' target='_blank'> Trabalhe Conosco </a>
+          </li>
+          <li>
+            <a href='.' target='_blank'> Desperdiçômetro </a>
+          </li>
+          <li>
+            <a href='https://clarke.com.br/blog/' target='_blank'> Blog </a>
+          </li>
+        </ul>
+
+        <img src='./public/Empresa.png' alt='Empresa' class='max-w-[160px] max-h-[160px]' />
+        
+        <div>
+          <a href="#topo" class="underline underline-offset-4 font-bold">Voltar ao topo</a>
+          <img src="./public/arrowupIcon.svg" alt="icone de voltar para o topo" width="20" height="24" />
+        </div>
+      </div>
+
+    </footer>
+</body>
+
+
+</html>
